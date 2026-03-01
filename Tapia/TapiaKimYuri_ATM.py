@@ -30,7 +30,7 @@ if Authentication:
         print("")
 
         if choice == '1':
-            print(f"Current Balance: $", Balance)
+            print("Current Balance: $", Balance)
 
         elif choice == '2':
             d_amount = float(input("Enter the amount to deposit: "))
@@ -57,3 +57,4 @@ if Authentication:
 else:
     print("Invalid credentials: Account Locked")
     print("Please contact your bank for assistance.")
+
