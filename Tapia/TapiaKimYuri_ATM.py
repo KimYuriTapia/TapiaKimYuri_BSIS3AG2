@@ -10,12 +10,12 @@ while Attempts > 0:
     input_Pass = input("Enter the account password: ")
 
     if input_ID == Acc_ID and input_Pass == Acc_Pass:
-        print(f"\nAccess Granted! Welcome, ", Acc_Name)
+        print("Access Granted! Welcome, ", Acc_Name)
         Authentication = True
         break
     else:
         Attempts -= 1
-        print(f"Invalid Credentials! Attempts remaining: ", Attempts)
+        print("Invalid Credentials! Attempts remaining: ", Attempts)
 
 
 if Authentication:
@@ -36,16 +36,16 @@ if Authentication:
             d_amount = float(input("Enter the amount to deposit: "))
             if d_amount > 0:
                 Balance += d_amount
-                print(f"Successfully deposited $", d_amount)
+                print("Successfully deposited $", d_amount)
             else:
                 print("Transaction Failed: Invalid amount.")
 
         elif choice == '3':
-            print(f"Current Balance: $", Balance)
+            print("Current Balance: $", Balance)
             w_amount = float(input("Withdraw amount: "))
             if 0 < w_amount <= Balance:
                 Balance -= w_amount
-                print(f"Successfully withdrawn $",w_amount)
+                print("Successfully withdrawn $",w_amount)
             else:
                 print("Transaction Failed: Insufficient funds or Invalid amount")
 
@@ -55,6 +55,5 @@ if Authentication:
         else:
             print("Invalid selection")
 else:
-    # This only triggers if the 'while' loop finishes without Authentication becoming True
-    print("\nInvalid credentials: Account Locked")
+    print("Invalid credentials: Account Locked")
     print("Please contact your bank for assistance.")
